@@ -1,0 +1,530 @@
+.wrap_loader {
+	width: 70px;
+	height: 70px;
+	background: url(../img/spinner.gif);
+	background-size: 70px 70px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: fixed;
+	z-index: 9999;
+    top: 140px;
+    left: 50%;
+}
+
+.tablenav .tablenav-pages {
+    margin-top: 20px;
+}
+.wp-list-table #reservation {
+    width: 10%;
+}
+.wp-list-table .reservation {
+    text-align: center;
+}
+
+
+/** APARTMENT MAP **/
+
+.apartment_map_table {
+    padding: 30px;
+}
+.apartment_map_table, .apartment_map_floor, .apartment_map_floor_body {
+    width: 100%;
+}
+.floor_separator {
+    height: 40px;
+}
+.floor_number {
+    font-size: 1.8em;
+    padding: 13px 20px;
+    width: 10%;
+}
+.room_01, .room_02, .room_05, .room_06, .room_07, .room_08, .room_09, .room_10, .room_11, .room_14, .room_15 {
+    width: 9%;
+}
+.room_03, .room_04, .room_12, .room_13 {
+    width: 20%;
+}
+.room {
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px;
+    background: #fff;
+    opacity: 0.8;
+    transition-duration: 300ms;
+}
+.parking {
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px;
+    background: #fff;
+    opacity: 0.8;
+    transition-duration: 300ms;
+    width: 12.5%;
+}
+.empty_room {
+    background: #e3e3e3;
+}
+.room:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.room_number {
+    clear: both;
+    display: block;
+    margin-bottom: 10px;
+}
+.room_edit, .room_reservation {
+    margin: 7px;
+    text-decoration: none;
+}
+.room_status-multiple {
+    background: #fac9ff;
+}
+.room_status-draft {
+    background: #fff9c1;
+}
+.room_status-signed {
+    background: #d9e9ff;
+}
+.room_status-available {
+    background: #c8ffea;
+}
+.owner_living {
+    background: #ffbc74;
+}
+
+.map_legend {
+    margin-bottom: 50px;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    padding: 5px;
+}
+.map_legend td {
+    padding: 4px;
+    text-align: center;
+}
+.map_legend a::before {
+    margin-right: 7px;
+}
+.map_legend .room_info a::before {
+    margin-right: 12px;
+}
+
+.room_info {
+    width: 100%;
+    height: 40px;
+}
+.room_info a {
+    line-height: 16px;
+    vertical-align: middle;
+}
+.room_info td {
+    padding: 10px 0px 0px 0px;
+    margin: 0;
+}
+.room_info a::before {
+    font-size: 16px;
+    color: #f07faa;
+    width: 15px;
+}
+.room_info a.paid::before {
+    color: #0ecc8d;
+}
+.not_sold {
+    filter: brightness(85%);
+}
+.map_legend .room_info {
+    width: auto;
+}
+.monthly_warning::before {
+    color: #ff0061 !important;
+}
+.monthly_warning.already_created::before {
+    color: #0ecc8d !important;
+}
+
+
+
+
+[class^=tooltip] {
+  position: relative;
+}
+[class^=tooltip]:after {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  content: attr(data-tooltip);
+  padding: 6px 10px;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  background: grey;
+  color: white;
+  white-space: nowrap;
+  z-index: 300;
+  border-radius: 2px;
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+[class^=tooltip]:hover:after {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 300;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip--triangle:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+  border-bottom: solid 5px grey;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: translateX(-50%) translateY(-2px);
+  top: -120px;
+  left: 50%;
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  z-index: 300;
+}
+.tooltip--triangle:hover:before {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  z-index: 300;
+  rotate: 180deg;
+  transform: translateX(-50%) translateY(0);
+}
+
+.room_image::before {
+    margin-top: 10px;
+}
+
+mt-100 {
+margin-top: 150px;
+margin-left: 200px
+}
+h5 {
+color: #fff
+}
+.mytooltip {
+display: inline;
+position: relative;
+z-index: 999
+}
+.mytooltip .tooltip-item {
+cursor: pointer;
+display: inline-block;
+font-weight: 500;
+padding: 0 10px
+}
+.mytooltip .tooltip-content {
+position: absolute;
+z-index: 9999;
+width: 150px;
+left: 50%;
+margin: 0 0 70px -70px;
+bottom: 100%;
+text-align: left;
+font-size: 14px;
+line-height: 30px;
+-webkit-box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
+box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
+background: #2b2b2b;
+opacity: 0;
+cursor: default;
+pointer-events: none
+}
+.mytooltip .tooltip-content::after {
+content: '';
+top: 100%;
+left: 50%;
+border: solid transparent;
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-color: #2a3035 transparent transparent;
+border-width: 10px;
+margin-left: -10px
+}
+.mytooltip .tooltip-content img {
+position: relative;
+height: 150px;
+display: block;
+margin: 0 auto;
+}
+.mytooltip .tooltip-item::after {
+content: '';
+position: absolute;
+height: 20px;
+bottom: 100%;
+left: 50%;
+pointer-events: none;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%)
+}
+.mytooltip:hover .tooltip-item::after {
+pointer-events: auto;
+display: none;
+}
+.mytooltip:hover .tooltip-content {
+pointer-events: auto;
+opacity: 1;
+-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg)
+}
+.mytooltip:hover .tooltip-content2 {
+opacity: 1;
+font-size: 18px
+}
+.mytooltip .tooltip-text {
+font-size: 14px;
+line-height: 24px;
+display: block;
+padding: 1.31em 1.21em 1.21em 0;
+color: #fff
+}
+
+
+
+
+/** RESERVATION PAGE **/
+
+.reservation_documents_message .acf-input {
+    background: #f07faa;
+    padding: 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+.doc_link, .doc_send, .doc_del, .doc_pay {
+    text-decoration: none;
+    padding-left: 5px;
+    margin: 5px 15px 5px 5px;
+    cursor: pointer;
+    line-height: 22px;
+}
+.doc_link:hover, .doc_send:hover, .doc_del:hover, .doc_pay:hover {
+    color: #f07faa;
+}
+.doc_link:before, .doc_send:before, .doc_del:before {
+    margin-right: 10px;
+}
+.doc_sent, .doc_paid {
+    color: #28ec74;
+}
+.doc_overpaid {
+    color: #ea76e2;
+}
+.button-secondary.dashicons-before::before {
+    margin: 5px 10px 0px 0px;
+}
+.doc_pay {
+    margin: 0 20px !important;
+    position: relative;
+}
+#contract_extension_post .doc_pay {
+    display: none;
+}
+.doc {
+    height: 40px;
+    line-height: 40px;
+}
+.doc a::before {
+    padding-top: 9px
+}
+
+#minor-publishing-actions, .misc-pub-visibility {
+    display: none;
+}
+
+.wp-list-table thead a {
+    color: #13b99a;
+}
+
+#adminmenu li.wp-menu-separator {
+    display: none;
+}
+#adminmenu a.admin-logo{
+    display: block;
+    background: url(../img/mlz-logo.png) no-repeat center center;
+    background-size: 140px 140px;
+    width: 140px;
+    height: 170px;
+    margin: 0 auto;
+    padding: 0px;
+}
+#adminmenu a.admin-logo div.wp-menu-name {
+    display: none;
+}
+#adminmenu a.admin-logo:hover {
+    box-shadow: none;
+}
+
+.form_error {
+    border: 2px solid #f07faa;
+    border-radius: 3px;
+}
+
+/* hide taxonomy meta boxes
+.form-field.term-slug-wrap,
+.form-field.term-parent-wrap,
+.form-field.term-description-wrap,
+#edittag > h2:first-of-type,
+#edittag .permalink {
+    display: none;
+} */
+
+#expensecatsdiv {
+    display: none;
+}
+
+.document_date, .document_button, .owner_date, .extension_date {
+    display: table-cell;
+}
+.extension_date input {
+    margin-top: 10px !important;
+}
+.deposit_count {
+    width: 20%;
+    display: table-cell;
+}
+#acf-field_reservation_create_deposit_invoice_count {
+    margin-top: 10px;
+}
+#date-invoice_deposit, .acf-field-reservation-create-deposit-invoice {
+    width: 40%;
+}
+.document_button button {
+    width: 100%;
+}
+.document_date input, .owner_date input {
+    margin-top: 10px !important;
+    width: 100px !important;
+}
+
+.acf-field-reservation-deposit-count, .acf-field-reservation-deposit-utility, .acf-field-reservation-entry-cards, .acf-field-reservation-contract-type, .acf-field-reservation-contract-length, .acf-field-reservation-date-from {
+    background: #e7f7ef;
+}
+
+
+
+
+/* payment form */
+
+#payment_form_wrap {
+    width: 100%;
+    height: 100%;
+    background: rgba(213, 238, 228, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+}
+#close_payment_window {
+    position: relative;
+    float: right;
+    font-size: 20px;
+    margin: -25px -25px 0 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+#close_payment_window:hover {
+    color: #ff4f19;
+}
+
+.payment_form {
+    width: 350px;
+    border: 1px solid #28ec74;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 40px;
+}
+.save_payment {
+    clear: both;
+    margin-top: 40px;
+    display: block;
+}
+.add_payment {
+    margin-bottom: 20px;
+}
+.payment_pdf {
+    float: left;
+    text-decoration: none;
+}
+.payment_pdf:hover {
+    color: #ffbc74;
+}
+.payment_balance {
+    float: right;
+    margin-top: -20px;
+}
+.remove_payment {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ff4f19;
+    cursor: pointer;
+    float: right;
+}
+.payment_date, .payment_type {
+    width: 100%;
+}
+.payment_amount {
+    width: 80%;
+    text-align: right;
+}
+
+.column-payments { 
+    width:25% !important;
+    overflow:hidden;
+}
+.payment_list {
+    border-collapse: collapse;
+    width: 100%;
+}
+.payment_list td {
+    padding: 3px;
+}
+.overpaid {
+    color: #0ecc8d !important;
+}
+.topay {
+    color: #cc0e0e !important;
+}
+
+
+
+/* STATS */
+
+.stats_table {
+    width: 100%;
+}
+.stats_table thead {
+    font-weight: 700;
+    background: #fff9c1;
+}
+.stats_table td {
+    text-align: center;
+    padding: 5px;
+}
+.chart-container {
+    margin-top: 30px;
+}
+
+.column-pdf_file {
+    width: 8%;
+    text-align: center !important;
+}
+
+#year-invoice_owner_payout, #year-invoice_owner {
+    width: 30%;
+}
+#year-invoice_owner_payout select, #year-invoice_owner select {
+    margin-top: 9px;
+}
